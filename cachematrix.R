@@ -29,8 +29,9 @@ makeCacheMatrix <- function(x = matrix()) {
      advantage of R's lexical scoping. In other words, the get/set 
      functions can access the inverse and x variables because R considers their
      DEFINING environment (in this case the makeCacheMatrix function definition)
-     rather than their execution environment (the global environment) when 
-     searching for the associated values."
+     rather than their calling environment (the global environment, if the 
+     function is called from the console) when searching for the associated 
+     values."
     
     #return a CacheMatrix
     list(get=get, 
